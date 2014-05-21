@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ElasticSearch</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .panel pre {
+            background: none;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>
+    <script>
+        $('.checkbox a').on('click', function(e){
+            e.preventDefault();
+            $(this).closest('.checkbox').find('input').prop('checked', true).closest('form').submit();
+            return false;
+        });
+
+        $('input[name="q"]').autocomplete({
+            source: 'suggest.php',
+            minLength: 1
+        });
+    </script>
+</body>
+</html>

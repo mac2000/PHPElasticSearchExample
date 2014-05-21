@@ -1,0 +1,10 @@
+<tr>
+    <th>{% if price_stats.term %}{{ price_stats.term }}{% else %}OVERALL{% endif %}</th>
+    <td>{{ price_stats.total|round(2) }}</td>
+    <td>{{ price_stats.min|round(2) }}</td>
+    <td>{{ price_stats.max|round(2) }}</td>
+    <td>{{ price_stats.mean|round(2) }}</td>
+    <td>{{ price_stats.sum_of_squares|round(2) }}</td>
+    <td>{{ price_stats.variance|round(2) }}</td>
+    <td>{{ price_stats.std_deviation|round(2) }}</td>
+</tr>

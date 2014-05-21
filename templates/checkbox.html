@@ -1,0 +1,11 @@
+<div class="checkbox">
+    <label>
+        <input type="checkbox" name="{{ item.name }}" value="{{ item.value }}" {% if item.selected
+        %}checked{% endif %}/>
+        {% if item.selected %}
+        {{ item.label }}
+        {% else %}
+        <a href="#">{{ item.label }}</a>
+        {% endif %}
+    </label>
+</div>

@@ -1,0 +1,17 @@
+{
+    "name": "acme/elasticsearch",
+    "description": "Sample ElasticSearch project",
+    "require": {
+        "doctrine/dbal": "x",
+        "elasticsearch/elasticsearch": "x",
+        "twig/twig": "x"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marchenko Alexandr",
+            "email": "marchenko.alexandr@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

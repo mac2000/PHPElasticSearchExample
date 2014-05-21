@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="media">
+            <div class="pull-right">
+                <i class="glyphicon glyphicon-tag"></i> {{ item.category }}
+            </div>
+            <div class="media-body">{{ item.title }}</div>
+        </div>
+    </div>
+    <div class="panel-body">
+        {{ item.description }}
+    </div>
+    <div class="panel-footer">
+        <ul class="list-inline" style="margin:0">
+            <li><i class="glyphicon glyphicon-star"></i> {{ item.rating }}</li>
+            <li class="pull-right"><i class="glyphicon glyphicon-usd"></i> {{ item.price }}</li>
+        </ul>
+    </div>
+</div>

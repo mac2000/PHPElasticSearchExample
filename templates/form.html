@@ -1,0 +1,23 @@
+<form method="get" style="margin-top:2.2em">
+    <div class="form-group">
+    <label>Query</label>
+    <input class="form-control" type="text" name="q" value="{{ q }}"/>
+    </div>
+
+    <label>Categories</label>
+    {% for item in categories %}
+    {% include 'checkbox.html' %}
+    {% endfor %}
+
+    <label>Ratings</label>
+    {% for item in ratings %}
+    {% include 'checkbox.html' %}
+    {% endfor %}
+
+    <label>Prices</label>
+    {% for item in prices %}
+    {% include 'checkbox.html' %}
+    {% endfor %}
+
+    <input type="submit" value="Submit"/>
+</form>

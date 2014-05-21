@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <caption>Price stats</caption>
+    <tr>
+        <th></th>
+        <th>total</th>
+        <th>min</th>
+        <th>max</th>
+        <th>mean</th>
+        <th>sum_of_squares</th>
+        <th>variance</th>
+        <th>std_deviation</th>
+    </tr>
+    {% include 'stats_row.html' %}
+
+    {% for price_stats in category_price_stats %}
+    {% include 'stats_row.html' %}
+    {% endfor %}
+
+    {% for price_stats in rating_price_stats %}
+    {% include 'stats_row.html' %}
+    {% endfor %}
+</table>
